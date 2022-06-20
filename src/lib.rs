@@ -62,7 +62,7 @@ mod tests {
     }
 
     #[test]
-    fn add_edges() -> Result<()> {
+    fn add_edges() {
         let mut graph = Graph::<&str, &str, ()>::new();
         graph.add_node("A", "Aap");
         graph.add_node("B", "Beer");
@@ -76,7 +76,6 @@ mod tests {
 
         let result = graph.all_edges().len();
         assert_eq!(result, 3);
-        Ok(())
     }
 
     #[test]
